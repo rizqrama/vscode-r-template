@@ -9,5 +9,6 @@
         "--no-save",
         "--no-restore",
         "--r-binary=/usr/local/bin/R"
-    ]
+    ],
+    "workbench.colorTheme": "Default High Contrast"
 }
