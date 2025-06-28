@@ -5,10 +5,6 @@ echo "Build the docker"
 # Parameters
 user_name="rkrispin"
 image_label="r-dev"
-r_major=4
-r_minor=4
-r_patch=0
-
 
 # Identify the CPU type (M1 vs Intel)
 if [[ $(uname -m) ==  "aarch64" ]] ; then
@@ -20,7 +16,7 @@ else
 fi
 
 # Setting the image name
-ver=${r_major}.${r_minor}.${r_patch}
+ver=0.0.1
 tag="${CPU}.${ver}"
 docker_file=Dockerfile.r-dev
 image_name=$user_name/$image_label:$tag

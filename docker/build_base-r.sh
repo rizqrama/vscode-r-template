@@ -8,9 +8,9 @@ image_label="baser"
 r_major=4
 r_minor=4
 r_patch=0
-quarto_ver="1.5.47"
+quarto_ver="1.7.32"
 python_ver="3.10"
-venv_name="r-env"
+venv_name="r-dev"
 
 # Identify the CPU type (M1 vs Intel)
 if [[ $(uname -m) ==  "aarch64" ]] ; then
@@ -23,9 +23,9 @@ fi
 
 # Setting the image name
 ver=${r_major}.${r_minor}.${r_patch}
-tag="${CPU}.${ver}"
+tag="${CPU}-0.0.1"
 docker_file=Dockerfile.base-r
-image_name=$user_name/$image_label:$tag
+image_name=$user_name/$image_label-$ver:$tag
 
 echo "Image name: $image_name"
 

@@ -5,7 +5,7 @@ VENV_NAME=$1
 # # Set Python Environment
 python3 -m venv /opt/$VENV_NAME  \
     && export PATH=/opt/$VENV_NAME/bin:$PATH \
-    && echo "source /opt/$VENV_NAME/bin/activate" >> ~/.bashrc
+    && echo "source /opt/$VENV_NAME/bin/activate" >> ~/.zshrc
 
 
 pip3 install -r ./pkgs/requirements.txt
